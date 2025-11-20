@@ -3,7 +3,7 @@
 Welcome to FreeSTAR Everywhere!  
 This guide helps you set up and begin using the platform.
 
-## Installatio
+## Installation
 
 1. Clone the repository:
     ```

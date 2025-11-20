@@ -1,8 +1,8 @@
 # GitHub Pages Setup Instructions
 
-After merging this PR, you'll need to enable GitHub Pages in the repository settings:
+**IMPORTANT:** You must enable GitHub Pages in the repository settings BEFORE the deployment workflow will work. The workflow will fail with a 404 error if Pages is not enabled.
 
-## Steps to Enable GitHub Pages
+## Steps to Enable GitHub Pages (Required First)
 
 1. Go to your repository on GitHub: `https://github.com/FreeSTAR-Network/freestar-everywhere-wiki`
 
@@ -12,6 +12,8 @@ After merging this PR, you'll need to enable GitHub Pages in the repository sett
 
 4. Under "Build and deployment":
    - **Source**: Select "GitHub Actions"
+   
+   **Note:** This step is CRITICAL. The workflow cannot deploy until this is configured. If you see a 404 error in the deployment step, it means Pages is not enabled yet.
    
 5. Save the settings
 

@@ -1,4 +1,5 @@
 site_name: FreeSTAR Everywhere Wiki
+site_url: https://freestar-network.github.io/freestar-everywhere-wiki/
 theme:
   name: material
   logo:

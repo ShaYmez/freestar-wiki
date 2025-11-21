@@ -3,7 +3,7 @@
 Build all FreeSTAR wikis and create a unified documentation site.
 """
 
-import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -54,7 +54,6 @@ def create_site_structure():
     OUTPUT_DIR.mkdir(exist_ok=True)
     
     # Copy main index.html
-    import shutil
     index_source = BASE_DIR / "index.html"
     if index_source.exists():
         shutil.copy(index_source, OUTPUT_DIR / "index.html")
@@ -63,6 +62,16 @@ def create_site_structure():
     # Create wikis subdirectory in output
     wikis_output = OUTPUT_DIR / "wikis"
     wikis_output.mkdir(exist_ok=True)
+    
+    # Copy built wikis to site/wikis/ structure
+    for wiki in WIKIS:
+        wiki_site_dir = WIKIS_DIR / wiki / "site"
+        if wiki_site_dir.exists():
+            target_dir = wikis_output / wiki
+            if target_dir.exists():
+                shutil.rmtree(target_dir)
+            shutil.copytree(wiki_site_dir, target_dir)
+            print(f"✅ Copied {wiki} wiki to site/wikis/{wiki}")
     
     return True
 

@@ -4,6 +4,7 @@ Build all FreeSTAR wikis and create a unified documentation site.
 """
 
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -49,8 +50,6 @@ def build_wiki(wiki_name):
 def create_site_structure():
     """Create the output site structure."""
     print("\n📁 Creating site structure...")
-    
-    import shutil
     
     # Create output directory
     OUTPUT_DIR.mkdir(exist_ok=True)

@@ -10,10 +10,10 @@ Central documentation hub for all FreeSTAR Network projects, built with [MkDocs 
 
 ## 📚 Available Wikis
 
-- **[FreeSTAR Everywhere](wikis/everywhere/)** - VoIP service for licensed amateur radio operators
-- **[FreeSTAR Multi-Mode](wikis/multi-mode/)** - Versatile multi-mode communication platform
-- **[FreeSTAR SystemX](wikis/systemx/)** - Network management system for amateur radio
-- **[FreeSTAR ModuleX](wikis/modulex/)** - Modular component system for custom solutions
+- **[FreeSTAR Everywhere](everywhere/)** - VoIP service for licensed amateur radio operators
+- **[FreeSTAR Multi-Mode](multi-mode/)** - Versatile multi-mode communication platform
+- **[FreeSTAR SystemX](systemx/)** - Network management system for amateur radio
+- **[FreeSTAR ModuleX](modulex/)** - Modular component system for custom solutions
 
 ## 🚀 Quick Start
 
@@ -41,7 +41,7 @@ This builds all wikis and creates a unified site accessible via `site/index.html
 Serve a wiki locally with live reload:
 
 ```bash
-cd wikis/everywhere
+cd everywhere
 mkdocs serve
 ```
 
@@ -54,7 +54,7 @@ Then visit [http://localhost:8000](http://localhost:8000).
 Each wiki follows this structure:
 
 ```
-wikis/[wiki-name]/
+[wiki-name]/
 ├── mkdocs.yml          # Configuration
 └── docs/
     ├── index.md        # Home page
@@ -67,7 +67,7 @@ wikis/[wiki-name]/
 
 1. **Create a Markdown file** in the wiki's `docs/` folder:
    ```bash
-   cd wikis/everywhere/docs
+   cd everywhere/docs
    touch new-feature.md
    ```
 
@@ -99,7 +99,7 @@ wikis/[wiki-name]/
 
 4. **Preview your changes**:
    ```bash
-   cd wikis/everywhere
+   cd everywhere
    mkdocs serve
    ```
 
@@ -109,7 +109,7 @@ wikis/[wiki-name]/
 
 1. **Place images** in the wiki's `docs/img/` folder:
    ```bash
-   cp screenshot.png wikis/everywhere/docs/img/
+   cp screenshot.png everywhere/docs/img/
    ```
 
 2. **Reference in Markdown**:
@@ -157,14 +157,14 @@ def hello_world():
 
 1. **Create the directory structure**:
    ```bash
-   mkdir -p wikis/new-wiki/docs/img
-   mkdir -p wikis/new-wiki/docs/stylesheets
+   mkdir -p new-wiki/docs/img
+   mkdir -p new-wiki/docs/stylesheets
    ```
 
-2. **Copy template files**:
+2. **Copy template files** (or copy from an existing wiki):
    ```bash
-   cp wikis/everywhere/mkdocs.yml wikis/new-wiki/
-   cp wikis/everywhere/docs/stylesheets/extra.css wikis/new-wiki/docs/stylesheets/
+   cp templates/new-wiki/mkdocs.yml new-wiki/
+   cp templates/new-wiki/docs/stylesheets/extra.css new-wiki/docs/stylesheets/
    ```
 
 3. **Update `mkdocs.yml`** with your wiki details:
@@ -176,8 +176,8 @@ def hello_world():
 
 4. **Create initial pages**:
    ```bash
-   echo "# Welcome to New Wiki" > wikis/new-wiki/docs/index.md
-   echo "# About" > wikis/new-wiki/docs/about.md
+   echo "# Welcome to New Wiki" > new-wiki/docs/index.md
+   echo "# About" > new-wiki/docs/about.md
    ```
 
 5. **Update the main `index.html`** to add a card for the new wiki

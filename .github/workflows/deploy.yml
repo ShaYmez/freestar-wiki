@@ -33,19 +33,19 @@ jobs:
       - name: Build all wikis
         run: |
           # Build each wiki
-          cd wikis/everywhere && mkdocs build && cd ../..
-          cd wikis/multi-mode && mkdocs build && cd ../..
-          cd wikis/systemx && mkdocs build && cd ../..
-          cd wikis/modulex && mkdocs build && cd ../..
+          cd everywhere && mkdocs build && cd ..
+          cd multi-mode && mkdocs build && cd ..
+          cd systemx && mkdocs build && cd ..
+          cd modulex && mkdocs build && cd ..
           
           # Create main site directory
-          mkdir -p site/wikis
+          mkdir -p site
           
           # Copy built wikis to site
-          cp -r wikis/everywhere/site site/wikis/everywhere
-          cp -r wikis/multi-mode/site site/wikis/multi-mode
-          cp -r wikis/systemx/site site/wikis/systemx
-          cp -r wikis/modulex/site site/wikis/modulex
+          cp -r everywhere/site site/everywhere
+          cp -r multi-mode/site site/multi-mode
+          cp -r systemx/site site/systemx
+          cp -r modulex/site site/modulex
           
           # Copy main index
           cp index.html site/index.html

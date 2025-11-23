@@ -34,7 +34,7 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
 
 1. Navigate to the appropriate wiki directory:
    ```bash
-   cd wikis/[wiki-name]/docs
+   cd [wiki-name]/docs
    ```
 
 2. Create or edit Markdown files
@@ -48,7 +48,7 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
 
 4. Test your changes locally:
    ```bash
-   cd wikis/[wiki-name]
+   cd [wiki-name]
    mkdocs serve
    ```
 
@@ -58,7 +58,7 @@ Thank you for your interest in contributing to the FreeSTAR Network documentatio
 
 1. Place images in the wiki's `docs/img/` directory:
    ```bash
-   cp image.png wikis/[wiki-name]/docs/img/
+   cp image.png [wiki-name]/docs/img/
    ```
 
 2. Reference in your Markdown:
@@ -81,7 +81,7 @@ nav:
 Each wiki follows this structure:
 
 ```
-wikis/[wiki-name]/
+[wiki-name]/
 ├── mkdocs.yml              # Configuration
 ├── docs/
 │   ├── index.md           # Home page
@@ -203,7 +203,7 @@ Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `fai
 
 1. **Test locally:**
    ```bash
-   cd wikis/[wiki-name]
+   cd [wiki-name]
    mkdocs serve
    ```
 

@@ -18,12 +18,11 @@ WIKIS = [
 
 # Base directory
 BASE_DIR = Path(__file__).parent
-WIKIS_DIR = BASE_DIR / "wikis"
 OUTPUT_DIR = BASE_DIR / "site"
 
 def build_wiki(wiki_name):
     """Build a single wiki."""
-    wiki_path = WIKIS_DIR / wiki_name
+    wiki_path = BASE_DIR / wiki_name
     if not wiki_path.exists():
         print(f"❌ Wiki directory not found: {wiki_name}")
         return False
@@ -59,19 +58,15 @@ def create_site_structure():
         shutil.copy(index_source, OUTPUT_DIR / "index.html")
         print("✅ Copied main index.html")
     
-    # Create wikis subdirectory in output
-    wikis_output = OUTPUT_DIR / "wikis"
-    wikis_output.mkdir(exist_ok=True)
-    
-    # Copy built wikis to site/wikis/ structure
+    # Copy built wikis to site/ structure
     for wiki in WIKIS:
-        wiki_site_dir = WIKIS_DIR / wiki / "site"
+        wiki_site_dir = BASE_DIR / wiki / "site"
         if wiki_site_dir.exists():
-            target_dir = wikis_output / wiki
+            target_dir = OUTPUT_DIR / wiki
             if target_dir.exists():
                 shutil.rmtree(target_dir)
             shutil.copytree(wiki_site_dir, target_dir)
-            print(f"✅ Copied {wiki} wiki to site/wikis/{wiki}")
+            print(f"✅ Copied {wiki} wiki to site/{wiki}")
     
     return True
 

@@ -8,7 +8,7 @@ To create a new wiki:
 
 1. **Copy the template directory:**
    ```bash
-   cp -r templates/new-wiki wikis/your-wiki-name
+   cp -r templates/new-wiki your-wiki-name
    ```
 
 2. **Update the mkdocs.yml file:**
@@ -33,7 +33,7 @@ To create a new wiki:
 
 6. **Test locally:**
    ```bash
-   cd wikis/your-wiki-name
+   cd your-wiki-name
    mkdocs serve
    ```
 

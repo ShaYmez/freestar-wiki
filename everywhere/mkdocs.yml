@@ -129,4 +129,4 @@ markdown_extensions:
       permalink_title: Anchor link to this section
 
 hooks:
-  - ../../hooks/git_authors.py
+  - ../hooks/git_authors.py

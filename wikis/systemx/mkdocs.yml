@@ -3,6 +3,7 @@ site_url: https://freestar-network.github.io/wiki/systemx/
 site_description: Comprehensive network management system for amateur radio operations
 theme:
   name: material
+  custom_dir: overrides
   logo: material/server-network
   favicon: material/star
   features:
@@ -65,6 +66,14 @@ nav:
   - Getting Started: getting-started.md
   - About: about.md
 
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: datetime
+      timezone: UTC
+      fallback_to_build_date: true
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -118,3 +127,6 @@ markdown_extensions:
   - toc:
       permalink: true
       permalink_title: Anchor link to this section
+
+hooks:
+  - ../../hooks/git_authors.py

@@ -4,7 +4,6 @@ This hook extracts the last commit author for each page and adds it to the page 
 """
 import subprocess
 import logging
-from pathlib import Path
 
 logger = logging.getLogger('mkdocs.plugins.git_authors')
 
@@ -38,11 +37,14 @@ def on_page_markdown(markdown, page, config, files):
     Hook that runs on each page's markdown content.
     Adds git author to page metadata.
     
+    This is a MkDocs hook with a standardized signature. The 'files' parameter
+    is required by the MkDocs hook interface even if not used in this implementation.
+    
     Args:
         markdown: The markdown content
         page: The page object
         config: The global config
-        files: All files
+        files: All files (required by MkDocs hook interface)
         
     Returns:
         str: The markdown content (unchanged)

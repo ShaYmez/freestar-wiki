@@ -14,9 +14,13 @@ context=fsphone
 disallow=all
 allow=ulaw
 
+; Optional: Custom port example, if instructed by admin (default is 4569)
+bindport=4570
+
 ; Optional, if instructed:
 ; register => rfnode12345:YourStrongPassword@PBX_IP/8001
 ```
+- **Default IAX2 port is UDP 4569.** Only set `bindport` if you and the PBX admin agree to use a custom port (e.g. 4570).
 
 ---
 
@@ -43,6 +47,14 @@ exten => ${EXTEN},6,NoOp(Connected: ${CALLSIGN})
 exten => ${EXTEN},7,Rpt,${NODE}|P
 exten => ${EXTEN},8,Hangup
 ```
+
+---
+
+> **IMPORTANT:**  
+> - Forward UDP port 4569 (default) on your router/firewall to your RF-Link node’s IP address.  
+> If using a custom port (e.g. 4570), forward **that** UDP port instead.
+> - If using a custom port, notify the PBX admin—they must configure the trunk for a different IAX port.
+
 ---
 
 ## 4. Reload
@@ -59,7 +71,7 @@ Or use the HamVoIP GUI "Reload."
 
 - Dial your assigned extension (e.g. 8001) from FreeSTAR Everywhere.
 - Callsign (FS-CALLSIGN) appears in AllMon3/monitoring.
-- EXTEN, username, password, and PBX IP must match PBX admin info.
+- EXTEN, username, password, and PBX IP (and port) must match admin info.
 - NODE is your RF node number.
 
 ---

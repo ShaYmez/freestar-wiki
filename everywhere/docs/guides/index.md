@@ -12,5 +12,3 @@ We've put together several guides to help you get the most out of the FreeSTAR E
 * [Features](../guides/features/index.md) – _how to enable and configure features such as BLF, LDAP, and more_
 
 ---
-
-This isn’t an exhaustive list. If you notice something missing, you can [contribute](../everywhere/wiki/contributing.md) a guide to help us improve!

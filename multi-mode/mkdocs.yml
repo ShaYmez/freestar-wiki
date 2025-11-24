@@ -65,6 +65,7 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - About: about.md
+  - Changelog: CHANGELOG.md
 
 plugins:
   - search

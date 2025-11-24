@@ -1,56 +1,48 @@
-# FreeSTAR Everywhere RF Link Owner Quick Setup (ASL3 & HamVoIP)
+# FreeSTAR Everywhere RF-Link Node Owner Quick Setup Guide
 
-Copy/paste, then set your own EXTEN and NODE numbers in globals below.
+Connect your RF-Link node to FreeSTAR Everywhere using the details provided by the PBX admin.
 
 ---
 
-## 1. IAX2 Trunk Setup
-
-In `/etc/asterisk/iax.conf`:
+## 1. IAX2 Trunk Setup (`/etc/asterisk/iax.conf`)
 
 ```ini
 [freestar]
 type=user
-secret=YourStrongPassword      ; Provided by FreeSTAR admin
-context=fsphone
+secret=YourStrongPassword         ; Provided by PBX admin
+context=radio-secure
 disallow=all
 allow=ulaw
-```
-; Registration string for FreeSTAR Everywhere, edit the string below with the credentials:
-; Format: register => extension:password@PBX_IP/extension
-register => 8001:YourStrongPassword@PBX_IP/8001
+
+; Optional, if instructed:
+; register => rfnode12345:YourStrongPassword@PBX_IP/8001
 ```
 
 ---
 
-## 2. Globals
-
-In `/etc/asterisk/extensions.conf`:
+## 2. Globals (`/etc/asterisk/extensions.conf`)
 
 ```ini
 [globals]
-NODE = 12345        ; Your node number
-EXTEN = 8001        ; Your RF-Link extension number provided by FreeSTAR Support
+NODE = 12345        ; Your RF node number
+EXTEN = 8001        ; Provided by PBX admin
 ```
 
 ---
 
-## 3. Dialplan
-
-Put this in `/etc/asterisk/extensions.conf` or via HamVoIP GUI:
+## 3. Dialplan (`/etc/asterisk/extensions.conf` or HamVoIP GUI)
 
 ```ini
-[fsphone]
+[radio-secure]
 exten => ${EXTEN},1,Set(CALLSIGN=FS-${CALLERID(name)})
 exten => ${EXTEN},2,Ringing
 exten => ${EXTEN},3,Wait(2)
 exten => ${EXTEN},4,Answer
 exten => ${EXTEN},5,Set(REMOTE=${CALLSIGN})
 exten => ${EXTEN},6,NoOp(Connected: ${CALLSIGN})
-exten => ${EXTEN},7,Rpt,${NODE}|P      ; Use |Pv if using VOX
+exten => ${EXTEN},7,Rpt,${NODE}|P
 exten => ${EXTEN},8,Hangup
 ```
-*Change ${EXTEN} in globals only!*
 
 ---
 
@@ -60,18 +52,19 @@ exten => ${EXTEN},8,Hangup
 asterisk -rx "dialplan reload"
 asterisk -rx "iax2 reload"
 ```
-Or use HamVoIP GUI "Reload".
+Or use the HamVoIP GUI "Reload."
 
 ---
 
-## 5. Testing
+## 5. Testing & Notes
 
-Dial your RF-Link EXTEN that FreeSTAR support provided you with, and test.
-- Callsign shows as `FS-CALLSIGN` in AllMon3.
-- PTT by defalt with |P is *99 #. If using VOX |Pv, then use the MUTE for saftey PTT
+- Dial your assigned extension (e.g. 8001) from FreeSTAR Everywhere.
+- Your node’s callsign (FS-CALLSIGN) will appear in AllMon3/monitoring.
+- EXTEN, username, password, and PBX IP must match PBX admin info.
+- NODE is your own RF node number.
 
 ---
 
 ## Support
 
-Open a ticket at [https://support.freestareverywhere.com](https://support.freestareverywhere.com)
+[https://support.freestareverywhere.com](https://support.freestareverywhere.com)

@@ -11,6 +11,7 @@ When a new RF-Link owner signs up, the PBX admin provides:
 - **Username** (e.g. `rfnode12345`)
 - **Password/Secret** (e.g. `YourStrongPassword`)
 - **PBX Public IP or DNS** (e.g. `linkpbx.freestar.org`)
+- **IAX Port** (4569 is default)
   
 The RF-Link owner uses these to configure their node.
 
@@ -29,7 +30,7 @@ Trunk Name: `southernfus`
 ```ini
 username = rfnode12345              ; Assigned by PBX admin
 secret = YourStrongPassword         ; Assigned by PBX admin
-host = Node_IP_or_DNS               ; IP or DNS of RF-Link node
+host = Node_IP_or_DNS:4569          ; IP or DNS of RF-Link node
 type = peer
 context = from-internal
 disallow = all

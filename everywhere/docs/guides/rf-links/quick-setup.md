@@ -7,9 +7,11 @@ Register your RF-Link node as an IAX2 extension on FreeSTAR Everywhere. No trunk
 ## 1. Supply Your Credentials
 
 Open a ticket with [https://support.freestareverywhere.com](https://support.freestareverywhere.com) and supply the PBX admin with the following information:
-- **Username:** The identifier you wish to use for your RF-Link node IAX extension.
-- **Password:** The secret/password for this extension.
+- **Callsign:** The callsign of the idividual or club of the RF-link owner. 
+- **Username:** The identifier you wish to use for your RF-Link node IAX extension. Normally the callsign.
+- **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port you wish to use for IAX (usually 4569, or specify a custom port if required).
+- **IAX String:** The string you need to provide the PBX admin to confugure your extension. [IAX2 String generator](https://freestareverwhere.com/iax2-generator)
 
 The PBX admin will use these details to create your IAX extension.
 

@@ -11,7 +11,7 @@ Open a ticket with [https://support.freestareverywhere.com](https://support.free
 - **Username:** The identifier you wish to use for your RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port you wish to use for IAX (usually 4569, or specify a custom port if required).
-- **IAX String:** The string you need to provide the PBX admin to confugure your extension. [IAX2 String generator](https://freestareverwhere.com/apps/iax2-generator)
+- **IAX String:** The string you need to provide the PBX admin to confugure your extension. [IAX2 String generator](https://freestareverywhere.com/apps/iax2-generator)
 
 The PBX admin will use these details to create your IAX extension.
 
@@ -21,8 +21,8 @@ The PBX admin will use these details to create your IAX extension.
 
 ```ini
 [freestar]
-username = USERNAME        ; <--- Replace with your assigned IAX username
-secret = PASSWORD          ; <--- Replace with your assigned IAX password/secret
+username = USERNAME        ; <--- Replace with your IAX username/callsign for RF-Link
+secret = PASSWORD          ; <--- Replace with your password for this RF-Link
 type = user
 context = fsphone
 disallow = all
@@ -64,11 +64,14 @@ Or use your control GUI’s "Reload" function.
 
 ## 6. Testing
 
-- Dial your assigned extension from FreePBX.
-- Check monitoring for callsign display.
+- Dial your assigned extension from FreeSTAR Everywhere .
+- Check monitoring for callsign display on your Allmon/supermon dashboard.
 - Ensure credentials match PBX settings.
 
 ---
+
+## Dial IAX String Generator
+With Love! [IAX2 String generator](https://freestareverywhere.com/apps/iax2-generator)
 
 ## Support
 

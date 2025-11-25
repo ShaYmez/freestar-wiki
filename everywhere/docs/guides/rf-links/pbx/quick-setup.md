@@ -11,7 +11,7 @@ Ensure you have the following details from the RF-Link node owner:
 - **Username:** The identifier for the RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port for IAX (usually 4569, or a custom port if required by the RF-Link owner).
-- **IAX String:** The string provided by the RF-Link owner to confugure the extension. [IAX2 String generator](https://freestareverwhere.com/iax2-generator)
+- **IAX String:** The string provided by the RF-Link owner to confugure the extension. [IAX2 String generator](https://freestareverwhere.com/apps/iax2-generator)
 
 ---
 

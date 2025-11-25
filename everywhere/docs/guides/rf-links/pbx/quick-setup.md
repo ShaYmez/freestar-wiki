@@ -6,13 +6,13 @@ This guide shows how to configure FreePBX 17 to connect and monitor a FreeSTAR E
 
 ## 1. PBX Admin: Assign RF-Link Credentials
 
-When a new RF-Link owner signs up, the PBX admin provides:
+When a new RF-Link owner signs up, the RF Link owner  provides:
 - **Username** (e.g. `rfnode12345`)
 - **Password/Secret** (e.g. `YourStrongPassword`)
-- **PBX Public IP or DNS** (e.g. `linkpbx.freestar.org`)
 - **IAX Port** (4569 is default)
+Upon acceptence we provide steering to the documentation for setup
   
-The RF-Link owner uses these to configure their node.
+The RF-Link owner uses these to configure their node. Negotiate the ticket to assign these credetials 
 
 ---
 
@@ -27,9 +27,10 @@ Trunk Name: `gb3nm`
 
 **Incoming:**
 ```ini
-username = rfnode12345              ; Assigned by PBX admin
-secret = YourStrongPassword         ; Assigned by PBX admin
-host = Node_IP_or_DNS:4569          ; IP or DNS of RF-Link node
+username = rfnode12345              ; Assigned by RF-Link owner
+secret = YourStrongPassword         ; Assigned by RF-Link owner
+host = 1234.nodes.allstarlink.org   ; IP or DNS of RF-Link node
+port = 4580                         ; IAX Port assigned by RF-Link owner
 type = peer
 context = from-internal
 disallow = all

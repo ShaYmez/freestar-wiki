@@ -11,7 +11,7 @@ Ensure you have the following details from the RF-Link node owner:
 - **Username:** The identifier for the RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port for IAX (usually 4569, or a custom port if required by the RF-Link owner).
-- **IAX String:** The string provided by the RF-Link owner to confugure the extension. [IAX2 String generator](https://freestareverywhere.com/apps/iax2-generator)
+- **IAX String:** The string provided by the RF-Link owner to confugure the extension. [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/)
 
 ---
 
@@ -52,7 +52,7 @@ IAX2/freestar:passw0rd@40071.nodes.allstarlink.org:4580/40071
 - Replace the final `/40071` with the **desired extension** on the RF-Link node (typically its node number).
 
 You can use this dial string wherever you configure outbound routes, custom extensions, or follow-me destinations in FreePBX to reach the RF-Link node.
-Use Dial String Generator if in doubt! [IAX2 String generator](https://freestareverywhere.com/apps/iax2-generator)
+Use Dial String Generator if in doubt! [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/)
 
 ---
 

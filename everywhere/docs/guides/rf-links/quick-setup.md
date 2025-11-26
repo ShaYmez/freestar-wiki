@@ -20,6 +20,7 @@ The PBX admin will use these details to create your IAX extension.
 ## 2. Configure RF-Link Node (`/etc/asterisk/iax.conf`)
 
 ```ini
+;FreeSTAR Everywhere PBX Connection
 [GB1ABC]                   ; <--- Replace with your IAX username/callsign, must match USERNAME, UPPERCASE  
 username = USERNAME        ; <--- Replace with your IAX username/callsign, must match USERNAME, UPPERCASE
 secret = PASSWORD          ; <--- Replace with your password for this RF-Link, STRONG PASSWORD

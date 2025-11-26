@@ -7,7 +7,7 @@ This guide explains how to create an IAX2 extension in FreePBX 17 so your PBX ca
 ## 1. Gather Required Information
 
 Ensure you have the following details from the RF-Link node owner:
-- **Callsign:** The callsign of the idividual or club of the RF-link owner. 
+- **Callsign:** The callsign of the individual or club of the RF-link owner. 
 - **Username:** The identifier for the RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port for IAX (usually 4569, or a custom port if required by the RF-Link owner).

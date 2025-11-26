@@ -6,17 +6,17 @@ Register your RF-Link node as an IAX2 extension on FreeSTAR Everywhere.
 
 ## Online Configuration Tools
 
-FreeSTAR Everywhere provides two helpful web-based tools to assist with IAX2 configuration:
+FreeSTAR Everywhere provides two helpful web-based tools to assist with configuring your AllStar node for IAX2 connections:
 
 ### IAX2 String Generator
 
-The [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) helps you create the IAX2 dial string needed to connect to your RF-Link node.
+The [IAX2 String Generator](https://freestareverywhere.com/apps/iax2string-generator/) helps you create the IAX2 dial string needed to connect to your AllStar node. Use this tool to generate the correct dial string format for your node configuration.
 
 ![IAX2 String Generator](../../assets/iax2string-generator.png)
 
 ### IAX2 Config Generator
 
-The [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-generator/) helps you generate the configuration for your `iax.conf` and `extensions.conf` files.
+The [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-generator/) helps you generate the configuration for your AllStar node's `iax.conf` and `extensions.conf` files. Simply enter your node details and the tool will create the correct configuration blocks for you.
 
 ![IAX2 Config Generator](../../assets/iax2config-generator.png)
 
@@ -25,7 +25,7 @@ The [IAX2 Config Generator](https://freestareverywhere.com/apps/iax2config-gener
 ## 1. Supply Your Credentials
 
 Open a ticket with [https://support.freestareverywhere.com](https://support.freestareverywhere.com) and supply the PBX admin with the following information:
-- **Callsign:** The callsign of the idividual or club of the RF-link owner. 
+- **Callsign:** The callsign of the individual or club of the RF-link owner. 
 - **Username:** The identifier you wish to use for your RF-Link node IAX extension. Normally the callsign.
 - **Password:** The secret/password for this extension. At least 10 digits. STRONG PASSWORD!
 - **IAX Port:** The UDP port you wish to use for IAX (usually 4569, or specify a custom port if required).
